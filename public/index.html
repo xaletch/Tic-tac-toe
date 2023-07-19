@@ -4,8 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic tac toe</title>
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="/css/index.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <div class="app">
+        <div class="tic-tac-toe__container">
+            <h1 class="tic-tac-toe__title">Tik tak toe</h1>
+            <div class="score">
+                <div class="score__inner">
+                    <h2>X: <span id="XScore">0</span></h2>
+                    <h2>O: <span id="OScore">0</span></h2>
+                </div>
+                <div class="score__inner">
+                    <h2>Draws</h2>
+                    <h2 id="draws">0</h2>
+                </div>
+            </div>
+            <div class="game">
+                <div class="cols">
+                    <div class="cell one"></div>
+                    <div class="cell two"></div>
+                    <div class="cell three"></div>
+                </div>
+                <div class="cols">
+                    <div class="cell four"></div>
+                    <div class="cell five"></div>
+                    <div class="cell six"></div>
+                </div>
+                <div class="cols">
+                    <div class="cell seven"></div>
+                    <div class="cell eight"></div>
+                    <div class="cell nine"></div>
+                </div>
+            </div>
+            <div class="reset">
+                <button class="reset__button resetBtn">Reset</button>
+            </div>
+            <div class="level">Level</div>
+        </div>
+    </div>
+
+    <script src="/js/index.js"></script>
 </body>
 </html>
