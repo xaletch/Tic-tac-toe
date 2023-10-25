@@ -25,7 +25,7 @@ const winCombos = [
     [2, 5, 8],
     [0, 4, 8],
     [2, 4, 6],
-  ];
+];
 
 for (let i = 0; i < cell.length; i++) {
     cell[i].addEventListener('click', cellClick);
@@ -60,7 +60,7 @@ function CheckWinner() {
   
         if ( cell1.innerHTML !== '' && cell1.innerHTML === cell2.innerHTML && cell2.innerHTML === cell3.innerHTML) {
             
-            level(`Player ${currentPlayer} wins!`);
+            level(`Игрок ${currentPlayer} выигрывает!`);
 
             flag = false;
             currentLevel++;
@@ -70,7 +70,7 @@ function CheckWinner() {
             setTimeout(() => {
                 resetBoard();
 
-                level(`level ${currentLevel}`);
+                level(`Уровень ${currentLevel}`);
             }, 2100);
         }
     }
@@ -93,7 +93,7 @@ function resetBoard() {
 
     flag = true;
     currentPlayer = X;
-    level(`Level ${currentLevel}`);
+    level(`Уровень ${currentLevel}`);
 }
   
 function checkDraw() {
@@ -107,11 +107,11 @@ function checkDraw() {
 
     if (isDraw) {
         draws.textContent++;
-        level("its a draw");
+        level("Ничья!");
         setTimeout(() => {
             resetBoard();
 
-            level(`level ${currentLevel}`);
+            level(`Уровень ${currentLevel}`);
         }, 2000);
     }
 }
@@ -152,10 +152,10 @@ reset.addEventListener('click', () => {
     xScoreSpan.textContent = xScore;
     oScoreSpan.textContent = oScore;
   
-    level('Game reset!');
+    level('Сброс игры!');
   
     setTimeout(() => {
-      level(`Level ${currentLevel}`);
+      level(`Уровень ${currentLevel}`);
       flag = true;
     }, 2100);
 });
