@@ -38,17 +38,17 @@ function cellClick(e) {
   
         CheckWinner();
         checkDraw();
-    }
+    };
         currentPlayer = currentPlayer === X ? O : X;
-    }
-}
+    };
+};
   
 function addImg(type) {
     const div = document.createElement('div');
     div.classList.add('image-div');
     div.textContent = type;
     return div;
-}
+};
   
 
 function CheckWinner() {
@@ -72,19 +72,19 @@ function CheckWinner() {
 
                 level(`Уровень ${currentLevel}`);
             }, 2100);
-        }
-    }
-}
+        };
+    };
+};
   
-function updateScore(player) {
-    if (player === X) {
-        xScore++;
-        xScoreSpan.textContent = xScore;
-    } else if (player === O) {
-        oScore++;
-        oScoreSpan.textContent = oScore;
-    }
-}
+// function updateScore(player) {
+//     if (player === X) {
+//         xScore++;
+//         xScoreSpan.textContent = xScore;
+//     } else if (player === O) {
+//         oScore++;
+//         oScoreSpan.textContent = oScore;
+//     }
+// }
   
 function resetBoard() {
     for (let i = 0; i < cell.length; i++) {
@@ -94,7 +94,7 @@ function resetBoard() {
     flag = true;
     currentPlayer = X;
     level(`Уровень ${currentLevel}`);
-}
+};
   
 function checkDraw() {
     let isDraw = true;
@@ -102,8 +102,8 @@ function checkDraw() {
     for (let i = 0; i < cell.length; i++) {
         if (cell[i].innerHTML === '') {
             isDraw = false;
-        }
-    }
+        };
+    };
 
     if (isDraw) {
         draws.textContent++;
@@ -113,8 +113,8 @@ function checkDraw() {
 
             level(`Уровень ${currentLevel}`);
         }, 2000);
-    }
-}
+    };
+};
 
 function level(msg) {
     levelDiv.classList.add('show');
@@ -123,7 +123,7 @@ function level(msg) {
     setTimeout(() => {
         levelDiv.classList.remove('show');
     }, 1800)
-}
+};
 
 function updateScore () {
     if (currentPlayer === X) {
@@ -132,8 +132,8 @@ function updateScore () {
     } else {
         oScore++;
         oScoreSpan.textContent = oScore;
-    }
-}
+    };
+};
 
 function resetBtn () {
     cell.forEach((cells) => cells.innerHTML = '');
